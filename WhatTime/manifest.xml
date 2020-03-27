@@ -1,0 +1,33 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<package version="0.0.0" uuid="whattime-1edb67">
+ <names>
+  <name lang="en_US">Untitled</name>
+  <name lang="ja_JP">日時</name>
+ </names>
+ <supportedLanguages>
+  <language>ja_JP</language>
+ </supportedLanguages>
+ <descriptionLanguages>
+  <language>ja_JP</language>
+ </descriptionLanguages>
+ <contents>
+  <behaviorContent path="behavior_1">
+   <nature>solitary</nature>
+   <names>
+    <name lang="ja_JP">時間</name>
+   </names>
+   <triggerSentences>
+    <sentence lang="en_US">Do you have the time?</sentence>
+    <sentence lang="en_US">What time is it now?</sentence>
+    <sentence lang="ja_JP">いまなんじ</sentence>
+    <sentence lang="ja_JP">イマナンジ</sentence>
+    <sentence lang="ja_JP">いまなんじ？</sentence>
+    <sentence lang="ja_JP">今何時</sentence>
+    <sentence lang="ja_JP">今何時?</sentence>
+   </triggerSentences>
+   <loadingResponses/>
+   <autonomous/>
+   <permissions/>
+  </behaviorContent>
+ </contents>
+</package>
