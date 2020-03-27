@@ -1,0 +1,28 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<package version="0.0.0" uuid="welcome-88efa2">
+ <names>
+  <name lang="en_US">Untitled</name>
+  <name lang="ja_JP">受付</name>
+ </names>
+ <descriptions>
+  <description lang="ja_JP">あいさつアプリ</description>
+ </descriptions>
+ <supportedLanguages>
+  <language>ja_JP</language>
+ </supportedLanguages>
+ <descriptionLanguages>
+  <language>ja_JP</language>
+ </descriptionLanguages>
+ <contents>
+  <behaviorContent path="behavior_1">
+   <nature>interactive</nature>
+   <names>
+    <name lang="ja_JP">来社受付</name>
+   </names>
+   <autonomous>
+    <condition purpose="launchTrigger"><![CDATA[(('Launchpad/NumPeopleZone3' > 0) ~ 5)]]></condition>
+   </autonomous>
+   <permissions/>
+  </behaviorContent>
+ </contents>
+</package>
