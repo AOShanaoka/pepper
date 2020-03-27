@@ -1,0 +1,39 @@
+topic: ~testdialog1()
+language: jpj
+
+# Defining extra concepts out of words or group of words
+#concept:(hello) [hello hi hey "good morning" greetings]
+
+# Catching inputs and triggering outputs
+#u:(e:onStart) $onStopped=1
+
+# Replying to speech
+#u:(~hello) ~hello
+
+concept:(goodbye)[さようなら　じゃあね　バイバイ]
+concept:(greeting)[こんにちわ　こんにちは　おーい　よう　ハロー]
+concept:(pepper)[ペッパー?　ペッパー　ぺっぱー? ぺっぱー]
+concept:(fortune)[オメデトウ|だいきちだよっ　まあまあだね｜ちゅうきちです。 ギリギリセーフ!｜しょうきちですッ　気を落とさないでッ｜きょうです。　　]
+concept:(zodiac)[おひつじざ　おうしざ　ふたござ　かにざ　ししざ　おとめざ　てんびんざ　さそりざ　いてざ　やぎざ　みずがめざ　うおざ]
+concept:(whattime)[いまなんじ　今何時　今何時？　イマナンジ　イマナンジ？　いまなんじ？]
+
+u:(e:onStart)\vct=135\\rspd=110\ 
+
+#名前を呼ばれた時の返事
+u:(~pepper)\vct=135\\rspd=110\  はぁぁぁい。なにかよう？？
+
+#占い機能
+u:(きょうの|うんせいは？)\vct=135\\rspd=110\あなたのせいざはなぁに？
+　u1:(~zodiac)\vct=135\\rspd=110\~fortune
+ 
+#挨拶
+u:(~greeting)\vct=135\\rspd=110\ ヤっほぉぉぉぉぉぉ
+
+#時間を教える(うまく動かない)
+u:(~whattime)^switchFocus(whattime-1edb67/behavior_1) $onStopped=1
+
+#会話終了
+u:(~goodbye)\vct=135\\rspd=110\ お話してくれてありがとうッ。 $onStopped=1
+
+#オウム返し(うまく動かない)
+u:(_*)\vct=135\\rspd=110\$1
